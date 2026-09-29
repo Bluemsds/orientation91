@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Après la 3e — Formations pro en Essonne</title>
+<meta name="description" content="Trouver un CAP ou un bac pro en Essonne (91), au lycée ou en apprentissage : métiers, lycées, CFA, places et niveau de demande.">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="entete">
+  <div class="conteneur entete-grille">
+    <div class="entete-texte">
+      <p class="surtitre"><span class="badge-91">91</span> Orientation après la 3e · Essonne</p>
+      <h1>Trouve <span class="surligne">ta formation pro</span><br>près de chez toi</h1>
+      <p class="intro">CAP ou bac pro, au lycée ou en apprentissage : découvre les métiers, compare les établissements et prépare tes vœux.</p>
+      <ul class="chiffres" aria-label="Le site en chiffres">
+        <li><strong id="nb-formations">85</strong> formations</li>
+        <li><strong id="nb-lycees">31</strong> lycées et EREA</li>
+        <li><strong id="nb-cfa">11</strong> CFA</li>
+      </ul>
+      <div class="raccourcis">
+        <button class="raccourci" data-aller="metiers">🔍 Je choisis un métier</button>
+        <button class="raccourci" data-aller="carte">📍 Près de chez moi</button>
+        <button class="raccourci" data-aller="apprentissage">🤝 L'apprentissage</button>
+      </div>
+    </div>
+    <svg class="illustration" viewBox="0 0 360 260" aria-hidden="true" focusable="false">
+      <circle cx="70" cy="60" r="28" fill="#ffc83d" opacity=".95"/>
+      <path d="M0 232 C80 214 150 246 230 226 C290 212 330 222 360 216 L360 260 L0 260 Z" fill="#2c64a8"/>
+      <rect x="40" y="130" width="70" height="98" rx="4" fill="#e8eef8"/>
+      <rect x="52" y="144" width="14" height="14" rx="2" fill="#7fa6db"/><rect x="84" y="144" width="14" height="14" rx="2" fill="#7fa6db"/>
+      <rect x="52" y="170" width="14" height="14" rx="2" fill="#7fa6db"/><rect x="84" y="170" width="14" height="14" rx="2" fill="#ffc83d"/>
+      <rect x="66" y="198" width="18" height="30" rx="2" fill="#1f4e8c"/>
+      <rect x="126" y="96" width="84" height="132" rx="4" fill="#ffffff"/>
+      <rect x="126" y="96" width="84" height="18" rx="4" fill="#ffc83d"/>
+      <g fill="#7fa6db"><rect x="138" y="126" width="16" height="16" rx="2"/><rect x="160" y="126" width="16" height="16" rx="2"/><rect x="182" y="126" width="16" height="16" rx="2"/>
+      <rect x="138" y="152" width="16" height="16" rx="2"/><rect x="182" y="152" width="16" height="16" rx="2"/><rect x="138" y="178" width="16" height="16" rx="2"/><rect x="182" y="178" width="16" height="16" rx="2"/></g>
+      <rect x="159" y="176" width="18" height="52" rx="2" fill="#1f4e8c"/>
+      <g stroke="#ffc83d" stroke-width="5" stroke-linecap="round" fill="none">
+        <path d="M262 228 V82"/><path d="M240 82 H330"/><path d="M262 82 L286 64 L330 82"/><path d="M318 82 V112"/>
+      </g>
+      <rect x="308" y="112" width="20" height="14" rx="2" fill="#ffffff"/>
+      <g stroke="#ffc83d" stroke-width="2"><path d="M262 100 L276 118 M262 136 L276 154 M262 172 L276 190 M276 118 L262 136 M276 154 L262 172 M276 190 L262 208"/></g>
+      <path d="M20 250 C90 236 160 250 240 238" stroke="#ffffff" stroke-width="3" stroke-dasharray="8 8" fill="none" opacity=".7"/>
+    </svg>
+  </div>
+  <ol class="conteneur parcours" aria-label="Les étapes">
+    <li><span>1</span>Je découvre les métiers</li>
+    <li><span>2</span>Je choisis où me former</li>
+    <li><span>3</span>Je prépare mes vœux</li>
+  </ol>
+</header>
+
+<main class="conteneur">
+  <nav class="onglets" role="tablist" aria-label="Façon de chercher">
+    <button role="tab" class="onglet actif" data-vue="metiers" aria-selected="true">Par métier</button>
+    <button role="tab" class="onglet" data-vue="lycees" aria-selected="false">Par établissement</button>
+    <button role="tab" class="onglet" data-vue="carte" aria-selected="false">Carte</button>
+    <button role="tab" class="onglet onglet-appr" data-vue="apprentissage" aria-selected="false">L'apprentissage</button>
+  </nav>
+
+  <section class="outils" aria-label="Filtres">
+    <div class="niveaux" role="group" aria-label="Diplôme">
+      <button class="puce actif" data-niveau="TOUS">Tout</button>
+      <button class="puce" data-niveau="CAP">CAP <small>2 ans</small></button>
+      <button class="puce" data-niveau="BAC">Bac pro <small>3 ans</small></button>
+    </div>
+    <div class="niveaux voies" role="group" aria-label="Façon de se former">
+      <button class="puce" data-voie="scolaire">🏫 Au lycée</button>
+      <button class="puce" data-voie="apprentissage">🤝 En apprentissage</button>
+    </div>
+    <label class="recherche">
+      <span class="visuellement-cache">Rechercher</span>
+      <input id="recherche" type="search" placeholder="Un métier, une ville, un lycée…" autocomplete="off">
+    </label>
+    <label class="choix-ville">
+      <span class="visuellement-cache">Ville</span>
+      <select id="ville"><option value="">Toutes les villes</option></select>
+    </label>
+    <p id="info-recherche" class="info-recherche" hidden></p>
+    <details class="legende-barre">
+      <summary>
+        <span class="legende-titre">Les couleurs :</span>
+        <span class="leg"><span class="pastille vert"></span>Places disponibles</span>
+        <span class="leg"><span class="pastille orange"></span>Demandée</span>
+        <span class="leg"><span class="pastille rouge"></span>Très demandée</span>
+        <span class="leg"><span class="pastille appr"></span>Apprentissage</span>
+        <span class="leg-aide">ⓘ Comment lire ?</span>
+      </summary>
+      <div class="legende-detail">
+        <p>Pour chaque formation au lycée, on compare le nombre d'élèves qui l'ont mise <strong>en 1er vœu</strong> au nombre de places (chiffres du CIO).</p>
+        <ul>
+          <li><span class="pastille vert"></span><span><strong>Places disponibles</strong> : moins de demandes que de places.</span></li>
+          <li><span class="pastille orange"></span><span><strong>Demandée</strong> : autant ou un peu plus de demandes que de places.</span></li>
+          <li><span class="pastille rouge"></span><span><strong>Très demandée</strong> : plus de 2 demandes pour 1 place. Garde-la dans tes vœux, mais ajoute d'autres choix.</span></li>
+          <li><span class="pastille appr"></span><span><strong>Apprentissage</strong> : pas de chiffre. Pour entrer, il faut surtout trouver une entreprise.</span></li>
+        </ul>
+        <p class="note">Une couleur ne veut pas dire « c'est impossible ». Parle de tes vœux avec ton professeur principal.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="vue-metiers">
+    <div id="secteurs" class="secteurs" aria-label="Secteurs"></div>
+    <div class="entete-resultats">
+      <h2 id="titre-resultats">Toutes les formations</h2>
+      <button id="effacer" class="lien" hidden>Tout effacer</button>
+    </div>
+    <div id="resultats" class="grille"></div>
+  </section>
+
+  <section id="vue-lycees" hidden>
+    <div id="lycees" class="liste-lycees"></div>
+  </section>
+
+  <section id="vue-carte" hidden>
+    <p class="aide-carte">Chaque rond = une ville. Le chiffre indique le nombre de lycées qui correspondent à ta recherche. Clique dessus pour les voir.</p>
+    <div id="carte" class="carte-geo" role="region" aria-label="Carte des lycées de l'Essonne"></div>
+    <p class="note">Position approximative : les lycées sont placés au centre de leur ville. Pour l'adresse exacte et le trajet, ouvre la fiche du lycée.</p>
+  </section>
+
+  <section id="vue-apprentissage" class="guide" hidden>
+    <h2>L'apprentissage, c'est quoi ?</h2>
+    <p class="chapo">Tu prépares <strong>le même diplôme</strong> (CAP ou bac pro), mais tu es <strong>salarié·e d'une entreprise</strong>. Tu alternes entre l'entreprise et un centre de formation d'apprentis (CFA). Par exemple : 2 semaines en entreprise, 1 semaine au CFA. Le rythme change selon les CFA.</p>
+
+    <div class="guide-grille">
+      <article class="guide-bloc">
+        <h3>👤 Qui peut le faire ?</h3>
+        <p>À partir de <strong>16 ans</strong>. Tu peux aussi commencer à <strong>15 ans</strong> si tu as terminé ta 3e.</p>
+        <p>Durée : <strong>2 ans</strong> pour un CAP, <strong>3 ans</strong> pour un bac pro.</p>
+      </article>
+      <article class="guide-bloc">
+        <h3>💶 Tu es payé·e</h3>
+        <p>Tu as un vrai contrat de travail et un salaire. La formation au CFA est gratuite pour toi.</p>
+        <table class="salaire">
+          <caption>Salaire minimum si tu as moins de 18 ans</caption>
+          <thead><tr><th>Année</th><th>% du SMIC</th><th>Environ (brut / mois)</th></tr></thead>
+          <tbody>
+            <tr><td>1re année</td><td>27 %</td><td>500 €</td></tr>
+            <tr><td>2e année</td><td>39 %</td><td>730 €</td></tr>
+            <tr><td>3e année</td><td>55 %</td><td>1 030 €</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Montants arrondis calculés sur le SMIC 2026. Certaines entreprises paient plus.</p>
+      </article>
+      <article class="guide-bloc important">
+        <h3>🔑 Le plus important : trouver une entreprise</h3>
+        <p>Pour être apprenti·e, il faut qu'une entreprise accepte de signer ton contrat. <strong>C'est à toi de la chercher</strong>, avec de l'aide.</p>
+        <ul class="puces">
+          <li>Commence tôt : dès janvier ou février de ta 3e.</li>
+          <li>Prépare un CV et une petite lettre avec ton professeur principal.</li>
+          <li>Appelle ou va voir les artisans et les entreprises près de chez toi (boulangeries, garages, électriciens…).</li>
+          <li>Pense à l'entreprise de ton stage de 3e.</li>
+          <li>Demande de l'aide au CFA : beaucoup ont des offres et t'aident à chercher.</li>
+        </ul>
+      </article>
+      <article class="guide-bloc">
+        <h3>⏳ Pas encore d'entreprise en septembre ?</h3>
+        <p>Tu peux quand même <strong>commencer au CFA pendant 3 mois maximum</strong> sans employeur. Le CFA t'aide à en trouver un pendant ce temps.</p>
+      </article>
+      <article class="guide-bloc">
+        <h3>📝 Et dans mes vœux (Affelnet) ?</h3>
+        <p>Tu peux indiquer des vœux en apprentissage. Ces vœux servent à <strong>signaler ton projet</strong> au CFA, qui te contacte. Ils ne te donnent pas une place automatiquement.</p>
+        <p><strong>Conseil :</strong> mets aussi des vœux au lycée professionnel, pour être sûr·e d'avoir une place si tu ne trouves pas d'entreprise.</p>
+      </article>
+      <article class="guide-bloc">
+        <h3>⚖️ Lycée ou apprentissage ?</h3>
+        <table class="compare">
+          <thead><tr><th></th><th>🏫 Au lycée</th><th>🤝 En apprentissage</th></tr></thead>
+          <tbody>
+            <tr><td>Statut</td><td>Élève</td><td>Salarié·e</td></tr>
+            <tr><td>Salaire</td><td>Non</td><td>Oui</td></tr>
+            <tr><td>Vacances</td><td>Vacances scolaires</td><td>5 semaines de congés par an</td></tr>
+            <tr><td>Entreprise</td><td>Stages (périodes de formation en milieu professionnel)</td><td>Tout au long de la formation</td></tr>
+            <tr><td>Pour entrer</td><td>Affectation par Affelnet</td><td>Signer un contrat avec une entreprise</td></tr>
+          </tbody>
+        </table>
+        <p class="note">L'apprentissage demande d'être autonome et à l'heure, comme au travail. Parles-en avec ton professeur principal et ta famille.</p>
+      </article>
+    </div>
+
+    <h3>🔗 Sites utiles pour chercher une entreprise</h3>
+    <div class="actions">
+      <a class="bouton-lien principal" href="https://labonnealternance.apprentissage.beta.gouv.fr/" target="_blank" rel="noopener">La bonne alternance (offres + entreprises) ↗</a>
+      <a class="bouton-lien" href="https://www.1jeune1solution.gouv.fr/apprentissage" target="_blank" rel="noopener">1 jeune 1 solution ↗</a>
+      <a class="bouton-lien" href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2918" target="_blank" rel="noopener">Contrat d'apprentissage (service-public) ↗</a>
+    </div>
+    <p><button class="bouton-lien" data-voie-raccourci="apprentissage">🤝 Voir toutes les formations en apprentissage en Essonne</button></p>
+  </section>
+
+</main>
+
+<dialog id="fiche" aria-labelledby="fiche-titre">
+  <div class="fiche-contenu" id="fiche-contenu"></div>
+</dialog>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p><a id="signaler" class="bouton-lien signaler" href="#">⚠️ Signaler une erreur ou une info dépassée</a></p>
+    <p class="signature">Site réalisé par <strong>David Dos Santos</strong>, enseignant en SEGPA.</p>
+    <p class="liens-pied"><a href="apropos.html">À propos</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+    <p id="source"></p>
+    <p>Lycées professionnels publics, EREA et centres de formation d'apprentis (CFA) de l'Essonne. Sources : CIO de l'Essonne, Onisep, CFA de l'académie de Versailles. Fond de carte : © IGN (Plan IGN). Site non officiel : vérifie toujours auprès de ton professeur principal, du CIO ou de l'établissement.</p>
+  </div>
+</footer>
+
+<script src="assets/leaflet/leaflet.js"></script>
+<script src="data/formations.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
