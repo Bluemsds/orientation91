@@ -100,15 +100,33 @@
   $('#signaler').href = lienSignalement('général (page d\'accueil)');
 
   // ---- Filtrage -----------------------------------------------------------
+  // Recherche mot par mot : « CAP AEPE », « bac pro MELEC », « cuisine Évry »…
+  // Chaque mot doit se trouver dans la formation (niveau, nom, secteur, spécialités,
+  // abréviations) ou dans l'établissement (nom, ville).
+  var MOTS_VIDES = ['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'un', 'une'];
+  function motsRecherche(t) {
+    return norm(t).split(/[^a-z0-9]+/).filter(function (m) { return m && MOTS_VIDES.indexOf(m) === -1; });
+  }
+  function texteFormation(f) {
+    if (f._txt === undefined) {
+      f._txt = norm((f.niveau === 'CAP' ? 'cap ' : 'bac pro ') + f.nom + ' ' + f.secteur + ' ' + (f.specialites || []).join(' '));
+      f._abr = (f.abrev || []).map(norm);
+    }
+    return f._txt;
+  }
+  function motDansFormation(f, m) {
+    if (texteFormation(f).indexOf(m) !== -1) return true;
+    return f._abr.some(function (a) { return a.indexOf(m) === 0; });
+  }
   function offresVisibles(f) {
-    var q = norm(etat.texte);
-    var formationCorrespond = !q || norm(f.nom + ' ' + f.secteur + ' ' + (f.specialites || []).join(' ')).indexOf(q) !== -1;
+    var restants = motsRecherche(etat.texte).filter(function (m) { return !motDansFormation(f, m); });
     return f.offres.filter(function (o) {
       var e = etabs[o.etab];
       if (!voieOk(o)) return false;
       if (etat.ville && e.ville !== etat.ville) return false;
-      if (formationCorrespond) return true;
-      return norm(e.nom + ' ' + e.ville).indexOf(q) !== -1;
+      if (!restants.length) return true;
+      var te = norm(e.nom + ' ' + e.ville);
+      return restants.every(function (m) { return te.indexOf(m) !== -1; });
     });
   }
   function formationsFiltrees(ignorerSecteur) {

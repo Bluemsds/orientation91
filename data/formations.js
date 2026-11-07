@@ -1,4 +1,5 @@
 /* Données du site — à mettre à jour chaque année (taux de pression CIO).
+   "abrev" : abréviations usuelles d'une formation (ex. AEPE), pour la barre de recherche.
    Établissements : fiches Onisep (consultées le 26/09/2026). Positions sur la carte = centre de la commune. */
 window.DONNEES = {
  "maj": "Taux de pression rentrée 2025 — source : CIO de l'Essonne",
@@ -726,6 +727,9 @@ window.DONNEES = {
    "id": "bac-accompagnement-soins-et-services-a-la-personne-assp",
    "niveau": "BAC",
    "nom": "Accompagnement, soins et services à la personne (ASSP)",
+   "abrev": [
+    "ASSP"
+   ],
    "secteur": "Santé, social & petite enfance",
    "famille": false,
    "specialites": [],
@@ -794,6 +798,7 @@ window.DONNEES = {
    "id": "bac-amenagements-paysagers",
    "niveau": "BAC",
    "nom": "Aménagements paysagers",
+   "abrev": [],
    "secteur": "Nature & espaces verts",
    "famille": false,
    "specialites": [],
@@ -821,6 +826,9 @@ window.DONNEES = {
    "id": "bac-animation-enfance-et-personnes-agees",
    "niveau": "BAC",
    "nom": "Animation – enfance et personnes âgées",
+   "abrev": [
+    "AEPA"
+   ],
    "secteur": "Santé, social & petite enfance",
    "famille": false,
    "specialites": [],
@@ -861,6 +869,10 @@ window.DONNEES = {
    "id": "bac-artisanat-et-metiers-d-art-option-marchandisage-visuel",
    "niveau": "BAC",
    "nom": "Artisanat et métiers d'art option marchandisage visuel",
+   "abrev": [
+    "AMA",
+    "MV"
+   ],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -887,6 +899,10 @@ window.DONNEES = {
    "id": "bac-assistance-a-la-gestion-des-organisations-et-de-leurs-activites",
    "niveau": "BAC",
    "nom": "Assistance à la gestion des organisations et de leurs activités (AGORA)",
+   "abrev": [
+    "AGORA",
+    "GA"
+   ],
    "secteur": "Logistique & gestion",
    "famille": false,
    "specialites": [],
@@ -914,6 +930,7 @@ window.DONNEES = {
    "id": "bac-aviation-generale",
    "niveau": "BAC",
    "nom": "Aviation générale",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -941,6 +958,7 @@ window.DONNEES = {
    "id": "bac-aeronautique",
    "niveau": "BAC",
    "nom": "Aéronautique (options avionique ou systèmes)",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -968,6 +986,7 @@ window.DONNEES = {
    "id": "bac-carrossier-peintre-automobile",
    "niveau": "BAC",
    "nom": "Carrossier peintre automobile",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -1022,6 +1041,9 @@ window.DONNEES = {
    "id": "bac-commercialisation-et-services-en-restauration",
    "niveau": "BAC",
    "nom": "Commercialisation et services en restauration",
+   "abrev": [
+    "CSR"
+   ],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -1049,6 +1071,9 @@ window.DONNEES = {
    "id": "bac-conducteur-transport-routier-marchandises",
    "niveau": "BAC",
    "nom": "Conducteur routier de marchandises",
+   "abrev": [
+    "CTRM"
+   ],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -1075,6 +1100,7 @@ window.DONNEES = {
    "id": "bac-cuisine",
    "niveau": "BAC",
    "nom": "Cuisine",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -1102,6 +1128,10 @@ window.DONNEES = {
    "id": "bac-cybersecurite-informatique-et-reseaux-electronique",
    "niveau": "BAC",
    "nom": "Cybersécurité, informatique et réseaux, électronique (CIEL)",
+   "abrev": [
+    "CIEL",
+    "SN"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -1136,6 +1166,10 @@ window.DONNEES = {
    "id": "bac-installateur-en-chauffage-climatisation-et-energies-renouvelables",
    "niveau": "BAC",
    "nom": "Installateur en chauffage, climatisation et énergies renouvelables",
+   "abrev": [
+    "ICCER",
+    "TISEC"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -1170,6 +1204,7 @@ window.DONNEES = {
    "id": "bac-maintenance-des-materiels",
    "niveau": "BAC",
    "nom": "Maintenance des matériels (agricoles, de chantier, d'espaces verts)",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -1197,6 +1232,9 @@ window.DONNEES = {
    "id": "bac-maintenance-des-systemes-de-production-connectes",
    "niveau": "BAC",
    "nom": "Maintenance des systèmes de production connectés (MSPC)",
+   "abrev": [
+    "MSPC"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -1245,6 +1283,10 @@ window.DONNEES = {
    "id": "bac-maintenance-des-vehicules",
    "niveau": "BAC",
    "nom": "Maintenance des véhicules option véhicules légers",
+   "abrev": [
+    "MV",
+    "MVA"
+   ],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -1286,6 +1328,10 @@ window.DONNEES = {
    "id": "bac-maintenance-et-efficacite-energetique",
    "niveau": "BAC",
    "nom": "Maintenance et efficacité énergétique",
+   "abrev": [
+    "MEE",
+    "TMSEC"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -1313,6 +1359,7 @@ window.DONNEES = {
    "id": "bac-modelisation-et-prototypage-3d",
    "niveau": "BAC",
    "nom": "Modélisation et prototypage 3D",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -1339,6 +1386,9 @@ window.DONNEES = {
    "id": "bac-metiers-de-l-agencement-de-la-menuiserie-et-de-l-ameublement",
    "niveau": "BAC",
    "nom": "Métiers de l'agencement, de la menuiserie et de l'ameublement",
+   "abrev": [
+    "MAMA"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": true,
    "specialites": [
@@ -1376,6 +1426,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-l-alimentation",
    "niveau": "BAC",
    "nom": "Métiers de l'alimentation",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": true,
    "specialites": [
@@ -1406,6 +1457,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-l-aeronautique",
    "niveau": "BAC",
    "nom": "Métiers de l'aéronautique",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": true,
    "specialites": [
@@ -1437,6 +1489,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-l-hotellerie-restauration",
    "niveau": "BAC",
    "nom": "Métiers de l'hôtellerie-restauration",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": true,
    "specialites": [
@@ -1466,6 +1519,9 @@ window.DONNEES = {
    "id": "bac-metiers-de-l-electricite-et-de-ses-environnements-connectes",
    "niveau": "BAC",
    "nom": "Métiers de l'électricité et de ses environnements connectés (MELEC)",
+   "abrev": [
+    "MELEC"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -1500,6 +1556,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-beaute-et-du-bien-etre",
    "niveau": "BAC",
    "nom": "Métiers de la beauté et du bien-être",
+   "abrev": [],
    "secteur": "Beauté & bien-être",
    "famille": true,
    "specialites": [
@@ -1529,6 +1586,10 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-construction-durable-du-batiment-et-des-travaux-publics",
    "niveau": "BAC",
    "nom": "Métiers de la construction durable, du bâtiment et des travaux publics",
+   "abrev": [
+    "MCDBTP",
+    "BTP"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": true,
    "specialites": [
@@ -1576,6 +1637,9 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-mode-vetements",
    "niveau": "BAC",
    "nom": "Métiers de la couture et de la confection (ex-métiers de la mode – vêtements)",
+   "abrev": [
+    "MMV"
+   ],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -1609,6 +1673,10 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-gestion-administrative-du-transport-et-de-la-logistique",
    "niveau": "BAC",
    "nom": "Métiers de la gestion administrative, du transport et de la logistique",
+   "abrev": [
+    "GATL",
+    "MGATL"
+   ],
    "secteur": "Logistique & gestion",
    "famille": true,
    "specialites": [
@@ -1730,6 +1798,7 @@ window.DONNEES = {
    "id": "bac-logistique",
    "niveau": "BAC",
    "nom": "Métiers de la logistique",
+   "abrev": [],
    "secteur": "Logistique & gestion",
    "famille": false,
    "specialites": [],
@@ -1764,6 +1833,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-maintenance-des-materiels-et-des-vehicules",
    "niveau": "BAC",
    "nom": "Métiers de la maintenance des matériels et des véhicules",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": true,
    "specialites": [
@@ -1814,6 +1884,9 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-relation-client",
    "niveau": "BAC",
    "nom": "Métiers de la relation client",
+   "abrev": [
+    "MRC"
+   ],
    "secteur": "Commerce, vente & accueil",
    "famille": true,
    "specialites": [
@@ -1928,6 +2001,10 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-realisation-d-ensembles-mecaniques-et-industriels",
    "niveau": "BAC",
    "nom": "Métiers de la réalisation d'ensembles mécaniques et industriels",
+   "abrev": [
+    "REMI",
+    "MREMI"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": true,
    "specialites": [
@@ -1993,6 +2070,7 @@ window.DONNEES = {
    "id": "bac-metiers-de-la-securite",
    "niveau": "BAC",
    "nom": "Métiers de la sécurité",
+   "abrev": [],
    "secteur": "Sécurité",
    "famille": false,
    "specialites": [],
@@ -2026,6 +2104,10 @@ window.DONNEES = {
    "id": "bac-metiers-des-transitions-numerique-et-energetique",
    "niveau": "BAC",
    "nom": "Métiers des transitions numérique et énergétique",
+   "abrev": [
+    "TNE",
+    "MTNE"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": true,
    "specialites": [
@@ -2163,6 +2245,10 @@ window.DONNEES = {
    "id": "bac-metiers-des-etudes-et-de-la-modelisation-numerique-du-batiment",
    "niveau": "BAC",
    "nom": "Métiers des études et de la modélisation numérique du bâtiment",
+   "abrev": [
+    "EMNB",
+    "MEMNB"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": true,
    "specialites": [
@@ -2207,6 +2293,9 @@ window.DONNEES = {
    "id": "bac-metiers-du-commerce-et-de-la-vente",
    "niveau": "BAC",
    "nom": "Métiers du commerce et de la vente (options A et B)",
+   "abrev": [
+    "MCV"
+   ],
    "secteur": "Commerce, vente & accueil",
    "famille": false,
    "specialites": [],
@@ -2248,6 +2337,7 @@ window.DONNEES = {
    "id": "bac-metiers-du-cuir-option-maroquinerie",
    "niveau": "BAC",
    "nom": "Métiers du cuir option maroquinerie",
+   "abrev": [],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -2274,6 +2364,10 @@ window.DONNEES = {
    "id": "bac-metiers-du-froid-et-des-energies-renouvelables",
    "niveau": "BAC",
    "nom": "Métiers du froid et des énergies renouvelables",
+   "abrev": [
+    "MFER",
+    "TFCA"
+   ],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -2301,6 +2395,10 @@ window.DONNEES = {
    "id": "bac-metiers-du-pilotage-et-de-la-maintenance-d-installations-automatisees",
    "niveau": "BAC",
    "nom": "Métiers du pilotage et de la maintenance d'installations automatisées",
+   "abrev": [
+    "PMIA",
+    "PLP"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": true,
    "specialites": [
@@ -2373,6 +2471,7 @@ window.DONNEES = {
    "id": "bac-optique-photonique-technologie-lumiere",
    "niveau": "BAC",
    "nom": "Optique photonique : technologies de la lumière",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -2399,6 +2498,9 @@ window.DONNEES = {
    "id": "bac-organisation-de-transport-de-marchandises",
    "niveau": "BAC",
    "nom": "Organisation de transport de marchandises",
+   "abrev": [
+    "OTM"
+   ],
    "secteur": "Logistique & gestion",
    "famille": false,
    "specialites": [],
@@ -2426,6 +2528,9 @@ window.DONNEES = {
    "id": "bac-services-aux-personnes-et-animation-dans-les-territoires",
    "niveau": "BAC",
    "nom": "Services aux personnes et animation dans les territoires (SAPAT)",
+   "abrev": [
+    "SAPAT"
+   ],
    "secteur": "Santé, social & petite enfance",
    "famille": false,
    "specialites": [],
@@ -2453,6 +2558,9 @@ window.DONNEES = {
    "id": "bac-technicien-de-fabrication-bois-et-materiaux-associes",
    "niveau": "BAC",
    "nom": "Technicien de fabrication bois et matériaux associés",
+   "abrev": [
+    "TFBMA"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -2480,6 +2588,9 @@ window.DONNEES = {
    "id": "bac-technicien-en-chaudronnerie-industrielle",
    "niveau": "BAC",
    "nom": "Technicien en chaudronnerie industrielle",
+   "abrev": [
+    "TCI"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -2507,6 +2618,9 @@ window.DONNEES = {
    "id": "bac-technicien-en-realisation-de-produits-mecaniques",
    "niveau": "BAC",
    "nom": "Technicien en réalisation de produits mécaniques",
+   "abrev": [
+    "TRPM"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -2534,6 +2648,9 @@ window.DONNEES = {
    "id": "cap-accompagnant-educatif-petite-enfance",
    "niveau": "CAP",
    "nom": "Accompagnant éducatif petite enfance",
+   "abrev": [
+    "AEPE"
+   ],
    "secteur": "Santé, social & petite enfance",
    "famille": false,
    "specialites": [],
@@ -2581,6 +2698,10 @@ window.DONNEES = {
    "id": "cap-agent-accompagnant-au-grand-age",
    "niveau": "CAP",
    "nom": "Agent accompagnant au grand âge",
+   "abrev": [
+    "AAGA",
+    "AGA"
+   ],
    "secteur": "Santé, social & petite enfance",
    "famille": false,
    "specialites": [],
@@ -2635,6 +2756,7 @@ window.DONNEES = {
    "id": "cap-agent-de-securite",
    "niveau": "CAP",
    "nom": "Agent de sécurité",
+   "abrev": [],
    "secteur": "Sécurité",
    "famille": false,
    "specialites": [],
@@ -2668,6 +2790,7 @@ window.DONNEES = {
    "id": "cap-aeronautique-option-avionique",
    "niveau": "CAP",
    "nom": "Aéronautique option avionique",
+   "abrev": [],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -2694,6 +2817,7 @@ window.DONNEES = {
    "id": "cap-boulanger",
    "niveau": "CAP",
    "nom": "Boulanger",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -2721,6 +2845,7 @@ window.DONNEES = {
    "id": "cap-carreleur-mosaiste",
    "niveau": "CAP",
    "nom": "Carreleur mosaïste",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -2747,6 +2872,7 @@ window.DONNEES = {
    "id": "cap-carrossier-automobile",
    "niveau": "CAP",
    "nom": "Carrossier automobile",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -2808,6 +2934,7 @@ window.DONNEES = {
    "id": "cap-charpentier-bois",
    "niveau": "CAP",
    "nom": "Charpentier bois",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -2834,6 +2961,9 @@ window.DONNEES = {
    "id": "cap-commercialisation-et-services-en-hotel-cafe-restaurant",
    "niveau": "CAP",
    "nom": "Commercialisation et services en hôtel-café-restaurant",
+   "abrev": [
+    "CSHCR"
+   ],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -2874,6 +3004,7 @@ window.DONNEES = {
    "id": "cap-conducteur-agent-d-accueil-en-autobus-et-autocar",
    "niveau": "CAP",
    "nom": "Conducteur agent d'accueil en autobus et autocar",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -2900,6 +3031,9 @@ window.DONNEES = {
    "id": "cap-conducteur-d-installations-de-production",
    "niveau": "CAP",
    "nom": "Conducteur d'installations de production",
+   "abrev": [
+    "CIP"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -2933,6 +3067,7 @@ window.DONNEES = {
    "id": "cap-cuisine",
    "niveau": "CAP",
    "nom": "Cuisine",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -2973,6 +3108,9 @@ window.DONNEES = {
    "id": "cap-esthetique-cosmetique-parfumerie",
    "niveau": "CAP",
    "nom": "Esthétique cosmétique parfumerie",
+   "abrev": [
+    "ECP"
+   ],
    "secteur": "Beauté & bien-être",
    "famille": false,
    "specialites": [],
@@ -3006,6 +3144,7 @@ window.DONNEES = {
    "id": "cap-ferronnier-d-art",
    "niveau": "CAP",
    "nom": "Ferronnier d'art",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3033,6 +3172,7 @@ window.DONNEES = {
    "id": "cap-fleuriste",
    "niveau": "CAP",
    "nom": "Fleuriste",
+   "abrev": [],
    "secteur": "Nature & espaces verts",
    "famille": false,
    "specialites": [],
@@ -3060,6 +3200,9 @@ window.DONNEES = {
    "id": "cap-installateur-en-froid-et-conditionnement-d-air",
    "niveau": "CAP",
    "nom": "Installateur en froid et conditionnement d'air",
+   "abrev": [
+    "IFCA"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3086,6 +3229,9 @@ window.DONNEES = {
    "id": "cap-intervenant-en-maintenance-technique-des-batiments",
    "niveau": "CAP",
    "nom": "Interventions en maintenance technique des bâtiments",
+   "abrev": [
+    "IMTB"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3112,6 +3258,10 @@ window.DONNEES = {
    "id": "cap-jardinier-paysagiste",
    "niveau": "CAP",
    "nom": "Jardinier paysagiste (CAP agricole)",
+   "abrev": [
+    "CAPA",
+    "JP"
+   ],
    "secteur": "Nature & espaces verts",
    "famille": false,
    "specialites": [],
@@ -3159,6 +3309,7 @@ window.DONNEES = {
    "id": "cap-maintenance-des-materiels-option-espaces-verts",
    "niveau": "CAP",
    "nom": "Maintenance des matériels option matériels d'espaces verts",
+   "abrev": [],
    "secteur": "Nature & espaces verts",
    "famille": false,
    "specialites": [],
@@ -3185,6 +3336,9 @@ window.DONNEES = {
    "id": "cap-maintenance-des-vehicules-option-voitures-particulieres",
    "niveau": "CAP",
    "nom": "Maintenance des véhicules option véhicules légers",
+   "abrev": [
+    "MV"
+   ],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -3253,6 +3407,7 @@ window.DONNEES = {
    "id": "cap-maroquinerie",
    "niveau": "CAP",
    "nom": "Maroquinerie",
+   "abrev": [],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -3286,6 +3441,7 @@ window.DONNEES = {
    "id": "cap-macon",
    "niveau": "CAP",
    "nom": "Maçon",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3333,6 +3489,9 @@ window.DONNEES = {
    "id": "cap-menuisier-aluminium-verre",
    "niveau": "CAP",
    "nom": "Menuisier aluminium-verre",
+   "abrev": [
+    "MAV"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3359,6 +3518,7 @@ window.DONNEES = {
    "id": "cap-menuisier-fabricant-de-menuiserie-mobilier-et-agencement",
    "niveau": "CAP",
    "nom": "Menuisier fabricant",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3399,6 +3559,9 @@ window.DONNEES = {
    "id": "cap-monteur-en-installations-sanitaires",
    "niveau": "CAP",
    "nom": "Monteur en installations sanitaires",
+   "abrev": [
+    "MIS"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3439,6 +3602,9 @@ window.DONNEES = {
    "id": "cap-monteur-en-installations-thermiques",
    "niveau": "CAP",
    "nom": "Monteur en installations thermiques",
+   "abrev": [
+    "MIT"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3472,6 +3638,7 @@ window.DONNEES = {
    "id": "cap-metallier",
    "niveau": "CAP",
    "nom": "Métallier",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3505,6 +3672,9 @@ window.DONNEES = {
    "id": "cap-metiers-de-l-agriculture",
    "niveau": "CAP",
    "nom": "Métiers de l'agriculture (CAP agricole)",
+   "abrev": [
+    "CAPA"
+   ],
    "secteur": "Nature & espaces verts",
    "famille": false,
    "specialites": [],
@@ -3532,6 +3702,7 @@ window.DONNEES = {
    "id": "cap-metiers-de-l-entretien-des-textiles-option-pressing",
    "niveau": "CAP",
    "nom": "Métiers de l'entretien des textiles option pressing",
+   "abrev": [],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -3565,6 +3736,7 @@ window.DONNEES = {
    "id": "cap-metiers-de-la-coiffure",
    "niveau": "CAP",
    "nom": "Métiers de la coiffure",
+   "abrev": [],
    "secteur": "Beauté & bien-être",
    "famille": false,
    "specialites": [],
@@ -3592,6 +3764,7 @@ window.DONNEES = {
    "id": "cap-metiers-de-la-mode-vetement-flou",
    "niveau": "CAP",
    "nom": "Métiers de la mode – vêtement flou",
+   "abrev": [],
    "secteur": "Mode, cuir & métiers d'art",
    "famille": false,
    "specialites": [],
@@ -3618,6 +3791,9 @@ window.DONNEES = {
    "id": "cap-operateur-de-service-relation-client-et-livraison",
    "niveau": "CAP",
    "nom": "Opérateur/opératrice de service – relation client et livraison",
+   "abrev": [
+    "OSRCL"
+   ],
    "secteur": "Logistique & gestion",
    "famille": false,
    "specialites": [],
@@ -3645,6 +3821,9 @@ window.DONNEES = {
    "id": "cap-operateur-operatrice-logistique",
    "niveau": "CAP",
    "nom": "Opérateur/opératrice logistique",
+   "abrev": [
+    "OL"
+   ],
    "secteur": "Logistique & gestion",
    "famille": false,
    "specialites": [],
@@ -3685,6 +3864,9 @@ window.DONNEES = {
    "id": "cap-peintre-applicateur-de-revetements",
    "niveau": "CAP",
    "nom": "Peintre applicateur de revêtements",
+   "abrev": [
+    "PAR"
+   ],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3718,6 +3900,7 @@ window.DONNEES = {
    "id": "cap-peintre-automobile",
    "niveau": "CAP",
    "nom": "Peintre automobile",
+   "abrev": [],
    "secteur": "Automobile, engins & transport",
    "famille": false,
    "specialites": [],
@@ -3759,6 +3942,9 @@ window.DONNEES = {
    "id": "cap-production-et-service-en-restaurations",
    "niveau": "CAP",
    "nom": "Production et service en restaurations (rapide, collective, cafétéria)",
+   "abrev": [
+    "PSR"
+   ],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -3813,6 +3999,7 @@ window.DONNEES = {
    "id": "cap-patissier",
    "niveau": "CAP",
    "nom": "Pâtissier",
+   "abrev": [],
    "secteur": "Hôtellerie, restauration & alimentation",
    "famille": false,
    "specialites": [],
@@ -3853,6 +4040,9 @@ window.DONNEES = {
    "id": "cap-realisations-industrielles-en-chaudronnerie-ou-soudage",
    "niveau": "CAP",
    "nom": "Réalisations industrielles en chaudronnerie ou soudage",
+   "abrev": [
+    "RICS"
+   ],
    "secteur": "Industrie & aéronautique",
    "famille": false,
    "specialites": [],
@@ -3886,6 +4076,7 @@ window.DONNEES = {
    "id": "cap-staffeur-ornemaniste",
    "niveau": "CAP",
    "nom": "Staffeur ornemaniste",
+   "abrev": [],
    "secteur": "Bâtiment & travaux publics",
    "famille": false,
    "specialites": [],
@@ -3913,6 +4104,7 @@ window.DONNEES = {
    "id": "cap-electricien",
    "niveau": "CAP",
    "nom": "Électricien",
+   "abrev": [],
    "secteur": "Électricité, énergie & numérique",
    "famille": false,
    "specialites": [],
@@ -4023,6 +4215,9 @@ window.DONNEES = {
    "id": "cap-equipier-polyvalent-du-commerce",
    "niveau": "CAP",
    "nom": "Équipier polyvalent du commerce",
+   "abrev": [
+    "EPC"
+   ],
    "secteur": "Commerce, vente & accueil",
    "famille": false,
    "specialites": [],
