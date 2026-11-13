@@ -1,5 +1,7 @@
 /* Données du site — à mettre à jour chaque année (taux de pression CIO).
    "abrev" : abréviations usuelles d'une formation (ex. AEPE), pour la barre de recherche.
+   "temps_plein" : lycées où la spécialité se prépare à temps plein en 1re-terminale, après la 2de pro de la famille indiquée
+   (source : Onisep, données ouvertes « Idéo-Actions de formation initiale - Univers lycée », consultées le 13/11/2026).
    Établissements : fiches Onisep (consultées le 26/09/2026). Positions sur la carte = centre de la commune. */
 window.DONNEES = {
  "maj": "Taux de pression rentrée 2025 — source : CIO de l'Essonne",
@@ -924,6 +926,23 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-gestion-administrative-du-transport-et-de-la-logistique",
+    "lycees": [
+     "lycee-de-l-essouriau-les-ulis",
+     "lycee-du-parc-de-vilgenis-massy",
+     "lycee-geoffroy-saint-hilaire-etampes",
+     "lycee-jean-monnet-juvisy-sur-orge",
+     "lycee-jean-perrin-longjumeau",
+     "lycee-louis-armand-yerres",
+     "lycee-marguerite-yourcenar-morangis",
+     "lycee-marie-laurencin-mennecy",
+     "lycee-nikola-tesla-dourdan",
+     "lycee-paul-belmondo-arpajon",
+     "lycee-paul-langevin-sainte-genevieve-des-bois",
+     "lycee-robert-doisneau-corbeil-essonnes"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -952,6 +971,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-l-aeronautique",
+    "lycees": [
+     "lycee-alexandre-denis-cerny"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -980,6 +1005,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-l-aeronautique",
+    "lycees": [
+     "lycee-alexandre-denis-cerny"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1065,6 +1096,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-l-hotellerie-restauration",
+    "lycees": [
+     "lycee-hotelier-du-chateau-des-coudraies-etiolles"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1122,6 +1159,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-l-hotellerie-restauration",
+    "lycees": [
+     "lycee-hotelier-du-chateau-des-coudraies-etiolles"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1160,6 +1203,15 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-des-transitions-numerique-et-energetique",
+    "lycees": [
+     "lycee-andre-marie-ampere-morsang-sur-orge",
+     "lycee-du-parc-de-vilgenis-massy",
+     "lycee-georges-brassens-evry-courcouronnes",
+     "lycee-nikola-tesla-dourdan"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1198,6 +1250,13 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-des-transitions-numerique-et-energetique",
+    "lycees": [
+     "lycee-gustave-eiffel-massy",
+     "lycee-pierre-mendes-france-ris-orangis"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1226,6 +1285,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-maintenance-des-materiels-et-des-vehicules",
+    "lycees": [
+     "lycee-nikola-tesla-dourdan"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1277,6 +1342,18 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-du-pilotage-et-de-la-maintenance-d-installations-automatisees",
+    "lycees": [
+     "lycee-clement-ader-athis-mons",
+     "lycee-de-l-essouriau-les-ulis",
+     "lycee-jean-perrin-longjumeau",
+     "lycee-nadar-draveil",
+     "lycee-nelson-mandela-etampes",
+     "lycee-nikola-tesla-dourdan",
+     "lycee-paul-belmondo-arpajon"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1322,6 +1399,14 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-maintenance-des-materiels-et-des-vehicules",
+    "lycees": [
+     "lycee-alexandre-denis-cerny",
+     "lycee-gaspard-monge-savigny-sur-orge",
+     "lycee-les-freres-moreau-quincy-sous-senart"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1353,6 +1438,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-des-transitions-numerique-et-energetique",
+    "lycees": [
+     "lycee-auguste-perret-evry-courcouronnes"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1550,6 +1641,24 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-des-transitions-numerique-et-energetique",
+    "lycees": [
+     "lycee-andre-marie-ampere-morsang-sur-orge",
+     "lycee-clement-ader-athis-mons",
+     "lycee-de-l-essouriau-les-ulis",
+     "lycee-du-parc-de-vilgenis-massy",
+     "lycee-jean-perrin-longjumeau",
+     "lycee-leonard-de-vinci-saint-michel-sur-orge",
+     "lycee-les-freres-moreau-quincy-sous-senart",
+     "lycee-nadar-draveil",
+     "lycee-nelson-mandela-etampes",
+     "lycee-nikola-tesla-dourdan",
+     "lycee-paul-belmondo-arpajon",
+     "lycee-pierre-mendes-france-ris-orangis",
+     "lycee-robert-doisneau-corbeil-essonnes"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -1827,6 +1936,13 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-gestion-administrative-du-transport-et-de-la-logistique",
+    "lycees": [
+     "lycee-alexandre-denis-cerny",
+     "lycee-gaspard-monge-savigny-sur-orge"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -2331,6 +2447,24 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-relation-client",
+    "lycees": [
+     "lycee-charles-baudelaire-evry-courcouronnes",
+     "lycee-henri-poincare-palaiseau",
+     "lycee-jean-monnet-juvisy-sur-orge",
+     "lycee-jean-perrin-longjumeau",
+     "lycee-louis-armand-yerres",
+     "lycee-marguerite-yourcenar-morangis",
+     "lycee-nadar-draveil",
+     "lycee-nelson-mandela-etampes",
+     "lycee-nikola-tesla-dourdan",
+     "lycee-paul-belmondo-arpajon",
+     "lycee-paul-langevin-sainte-genevieve-des-bois",
+     "lycee-pierre-mendes-france-ris-orangis",
+     "lycee-robert-doisneau-corbeil-essonnes"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -2389,6 +2523,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-des-transitions-numerique-et-energetique",
+    "lycees": [
+     "lycee-pierre-mendes-france-ris-orangis"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -2522,6 +2662,12 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-gestion-administrative-du-transport-et-de-la-logistique",
+    "lycees": [
+     "lycee-gaspard-monge-savigny-sur-orge"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -2612,6 +2758,13 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-realisation-d-ensembles-mecaniques-et-industriels",
+    "lycees": [
+     "lycee-jean-perrin-longjumeau",
+     "lycee-jean-pierre-timbaud-bretigny-sur-orge"
+    ]
+   },
    "specialite_bac": true
   },
   {
@@ -2642,6 +2795,14 @@ window.DONNEES = {
      "voie": "apprentissage"
     }
    ],
+   "temps_plein": {
+    "famille": "bac-metiers-de-la-realisation-d-ensembles-mecaniques-et-industriels",
+    "lycees": [
+     "lycee-du-parc-de-vilgenis-massy",
+     "lycee-les-freres-moreau-quincy-sous-senart",
+     "lycee-robert-doisneau-corbeil-essonnes"
+    ]
+   },
    "specialite_bac": true
   },
   {
