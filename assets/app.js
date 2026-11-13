@@ -179,7 +179,8 @@
       if (reste > 0) lignes += '<li class="plus">+ ' + reste + ' autre' + (reste > 1 ? 's' : '') + ' lycée' + (reste > 1 ? 's' : '') + '</li>';
       return '<button class="carte" data-formation="' + f.id + '">' +
         '<div class="etiquettes">' + etiquetteNiveau(f) + etiquettesAcces(f) + '</div>' +
-        '<h3>' + esc(f.nom) + '</h3>' + (seulementAppr(f) ? '<p class="seul-appr">Pas au lycée en Essonne : seulement en apprentissage</p>' : '') + '<p class="accroche">' + esc(f.description) + '</p><ul class="lieux">' + lignes + '</ul></button>';
+        '<h3>' + esc(f.nom) + '</h3>' + (seulementAppr(f) ? '<p class="seul-appr">Pas au lycée en Essonne : seulement en apprentissage</p>' : '') +
+        (lyceesTempsPlein(f).length ? '<p class="temps-plein-carte">🏫 Au lycée : à choisir en 1re, dans ' + lyceesTempsPlein(f).length + ' lycée' + (lyceesTempsPlein(f).length > 1 ? 's' : '') + '</p>' : '') + '<p class="accroche">' + esc(f.description) + '</p><ul class="lieux">' + lignes + '</ul></button>';
     }).join('');
   }
 
@@ -248,7 +249,13 @@
     d.querySelector('.fermer').focus();
   }
   function fermerFiche() { var d = $('#fiche'); if (d.close) d.close(); else d.removeAttribute('open'); }
-  function seulementAppr(f) { return f.offres.every(estAppr); }
+  function lyceesTempsPlein(f) { return f.temps_plein ? f.temps_plein.lycees.filter(function (id) { return etabs[id]; }) : []; }
+  function seulementAppr(f) { return f.offres.every(estAppr) && !lyceesTempsPlein(f).length; }
+  // Spécialités préparées à temps plein en 1re dans un lycée (après la 2de commune)
+  function specialitesDuLycee(id) {
+    return D.formations.filter(function (f) { return lyceesTempsPlein(f).indexOf(id) !== -1; })
+      .sort(function (a, b) { return a.nom.localeCompare(b.nom, 'fr'); });
+  }
   function enTete(etiquettes, titre) {
     return '<div class="fiche-haut"><div><div class="etiquettes">' + etiquettes + '</div><h2 id="fiche-titre">' + esc(titre) + '</h2></div><button class="fermer" aria-label="Fermer">×</button></div>';
   }
@@ -261,6 +268,15 @@
     var acc = {}; f.offres.forEach(function (o) { if (o.acces) acc[o.acces] = true; });
     var enc = '';
     if (seulementAppr(f)) enc += '<div class="encadre appr"><strong>Cette formation n\'existe pas au lycée en Essonne.</strong> Tu peux la préparer <strong>en apprentissage</strong> : regarde les CFA ci-dessous. <button class="lien" data-guide="1">Comment ça marche ?</button></div>';
+    var tp = lyceesTempsPlein(f), fam = f.temps_plein && formations[f.temps_plein.famille];
+    if (tp.length && fam) {
+      tp = tp.slice().sort(function (a, b) { return etabs[a].ville.localeCompare(etabs[b].ville, 'fr'); });
+      enc += '<div class="encadre info"><strong>🏫 Aussi à temps plein au lycée.</strong> Tu entres d\'abord en <button class="lien" data-formation="' + fam.id + '">2de pro « ' + esc(fam.nom) + ' »</button>. ' +
+        'À la fin de la 2de, tu choisis cette spécialité pour la 1re et la terminale. ' +
+        (tp.length > 1 ? 'Les ' + tp.length + ' lycées qui la proposent' : 'Le lycée qui la propose') + ' :<ul class="puces">' +
+        tp.map(function (id) { var e = etabs[id]; return '<li><button class="lien" data-lycee="' + e.id + '">' + esc(e.nom) + '</button> (' + esc(e.ville) + ')</li>'; }).join('') +
+        '</ul><small>Pour les places et la demande, regarde la fiche de la 2de pro. Source : Onisep.</small></div>';
+    }
     if (f.specialite_bac) enc += '<div class="encadre appr"><strong>🤝 Bac pro en apprentissage.</strong> En apprentissage, tu prépares en général directement cette spécialité, sans passer par une 2de commune.</div>';
     if (acc.segpa) enc += '<div class="encadre segpa"><strong>✔ Prioritaire pour les élèves de SEGPA.</strong> Les élèves de 3e SEGPA, ULIS et EANA passent en priorité sur ce CAP.</div>';
     if (acc.profil2de) enc += '<div class="encadre profil"><strong>CAP « profil 2de pro ».</strong> Les élèves de 3e générale sont prioritaires. Pour un élève de SEGPA, la candidature passe par une <strong>commission spécifique</strong> : parles-en à ton professeur principal.</div>';
@@ -319,7 +335,13 @@
       '<h3>Formations CAP et bac pro (' + lignes.length + ')</h3><ul class="liste-f">' +
       lignes.map(function (x) {
         return '<li><button data-formation="' + x.f.id + '">' + etiquetteNiveau(x.f, true) + '<span class="f-nom">' + esc(x.f.nom) + '</span>' + badgeOffre(x.o) + '</button></li>';
-      }).join('') + '</ul></div>';
+      }).join('') + '</ul>';
+    var specs = specialitesDuLycee(id);
+    if (specs.length) {
+      h += '<h3>Spécialités de bac pro en 1re (' + specs.length + ')</h3><p class="note">À choisir à la fin de la 2de pro commune.</p><ul class="liste-f">' +
+        specs.map(function (f) { return '<li><button data-formation="' + f.id + '">' + etiquetteNiveau(f, true) + '<span class="f-nom">' + esc(f.nom) + '</span></button></li>'; }).join('') + '</ul>';
+    }
+    h += '</div>';
     ouvrir(h);
   }
 

@@ -224,3 +224,5 @@ details a{color:var(--primaire)}
 .info-recherche{flex:1 1 100%;margin:0;padding:10px 14px;border-radius:12px;background:var(--primaire-clair);color:var(--texte);font-size:.93rem}
 .suspendu{opacity:.45}
 .seul-appr{margin:0;font-size:.85rem;font-weight:600;color:var(--appr)}
+.temps-plein-carte{margin:0;font-size:.85rem;font-weight:600;color:var(--primaire)}
+.encadre.info .lien{display:inline;text-align:left;padding:0}
