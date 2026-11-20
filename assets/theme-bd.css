@@ -1,0 +1,43 @@
+/* ==== Variante BANDE DESSINÉE : couleurs primaires, points Ben-Day, bulles, onomatopées ==== */
+@font-face{font-family:"Bangers";font-weight:400;font-display:swap;src:url(fonts/bangers-latin-400-normal.woff2) format("woff2")}
+:root{--encre:#111;--jaune:#ffd600;--rouge:#ff2d2d;--bleu:#1fb6ff;--titre:"Bangers",system-ui,sans-serif;--rayon:10px;--lime:#ffd600}
+body{background:#fff8dc radial-gradient(rgba(255,45,45,.13) 2px,transparent 2.5px) 0 0/14px 14px}
+.entete{background:var(--bleu);color:var(--encre);border-bottom:5px solid var(--encre)}
+.entete::before{background:radial-gradient(rgba(255,255,255,.35) 3px,transparent 3.5px) 0 0/16px 16px;}
+.entete-texte{background:var(--jaune);border:4px solid var(--encre);border-radius:6px;padding:18px 22px;box-shadow:8px 8px 0 var(--encre)}
+.surtitre{color:var(--encre)}
+.badge-91{background:var(--rouge);color:#fff;border:2px solid var(--encre)}
+.entete h1{font-family:var(--titre);font-weight:400;font-size:clamp(2.6rem,6.2vw,4.6rem);letter-spacing:.02em;line-height:.95;color:#fff;-webkit-text-stroke:2px var(--encre);paint-order:stroke fill;text-shadow:4px 4px 0 var(--encre);text-transform:uppercase}
+.surligne{background:var(--rouge);color:#fff;border:3px solid var(--encre);border-radius:4px;transform:rotate(-2deg);-webkit-text-stroke:2px var(--encre)}
+.intro{color:var(--encre);font-weight:600}
+.chiffres li{background:#fff;border:3px solid var(--encre);border-radius:8px;color:var(--encre)}
+.chiffres strong,.chiffres li:nth-child(n) strong{font-family:var(--titre);font-weight:400;font-size:1.6rem;color:var(--rouge)}
+.raccourci,.raccourci:first-child{border:3px solid var(--encre);border-radius:10px;background:#fff;color:var(--encre);box-shadow:5px 5px 0 var(--encre);font-family:var(--titre);font-weight:400;font-size:1.25rem;letter-spacing:.04em}
+.raccourci:first-child{background:var(--rouge);color:#fff}
+.raccourci:hover,.raccourci:focus-visible{box-shadow:7px 7px 0 var(--encre)}
+.parcours{color:var(--encre);font-weight:700}
+.parcours span{background:#fff;border:2.5px solid var(--encre);color:var(--encre)}
+.parcours li:not(:last-child)::after{color:var(--encre);opacity:1}
+/* bulles colorées */
+.sticker{border:3px solid var(--encre);border-radius:22px;box-shadow:5px 5px 0 var(--encre);font-family:var(--titre);font-weight:400;font-size:1.3rem;letter-spacing:.03em}
+.sticker::after{content:"";position:absolute;bottom:-16px;left:22px;width:22px;height:16px;background:inherit;border-left:3px solid var(--encre);border-bottom:3px solid var(--encre);clip-path:polygon(0 0,100% 0,0 100%);transform:skewX(-20deg)}
+.s3,.s6{background:#fff}
+.sticker-rond{width:150px;height:130px;border:0;border-radius:0;background:var(--rouge);clip-path:polygon(50% 0,60% 22%,84% 8%,78% 34%,100% 40%,80% 56%,96% 80%,70% 74%,62% 100%,48% 78%,30% 98%,28% 72%,2% 78%,18% 56%,0 36%,24% 32%,16% 6%,40% 22%);font-family:var(--titre);font-weight:400;font-size:1.25rem;letter-spacing:.03em;color:#fff;-webkit-text-stroke:1px var(--encre);top:210px;right:-20px}
+/* onglets & filtres */
+.onglet{border:3px solid var(--encre);border-radius:10px;font-family:var(--titre);font-weight:400;font-size:1.2rem;letter-spacing:.04em}
+.onglet.actif{background:var(--jaune);color:var(--encre);box-shadow:5px 5px 0 var(--encre)}
+.onglet-appr.actif{background:var(--appr);color:#fff}
+.puce,.recherche input,.choix-ville select,.legende-barre{border:2.5px solid var(--encre)}
+.puce.actif{background:var(--rouge);border-color:var(--encre)}
+/* cases de BD */
+.secteur,.carte,.lycee,.guide-bloc,.vide-message,.page-texte{border:3px solid var(--encre);border-radius:8px;background:#fff;box-shadow:4px 4px 0 var(--encre)}
+.secteur:hover,.carte:hover,.carte:focus-visible{box-shadow:7px 7px 0 var(--encre)}
+.secteur.actif{background:var(--jaune)}
+.secteur .nom{font-family:var(--titre);font-weight:400;font-size:1.15rem;letter-spacing:.03em}
+.carte h3,.guide-bloc h3,.fiche-haut h2,.guide h2{font-family:var(--titre);font-weight:400;letter-spacing:.03em;font-size:1.45rem}
+.entete-resultats h2{font-family:var(--titre);font-weight:400;font-size:2.1rem;letter-spacing:.04em;background:var(--jaune);border:3px solid var(--encre);padding:0 14px;display:inline-block;transform:rotate(-1deg);box-shadow:4px 4px 0 var(--encre)}
+.secteur .picto,.carte-picto{border:3px solid var(--encre);border-radius:50%}
+.etiquette{border:1.5px solid var(--encre)}
+dialog{border:4px solid var(--encre);border-radius:12px;box-shadow:10px 10px 0 var(--encre)}
+.bouton-lien{border:2.5px solid var(--encre)}
+.bouton-lien.principal{background:var(--rouge);border-color:var(--encre)}
