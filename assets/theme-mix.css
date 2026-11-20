@@ -1,0 +1,24 @@
+/* ==== Variante MIXTE : haut de page actuel + style BD pour le reste ==== */
+@font-face{font-family:"Bangers";font-weight:400;font-display:swap;src:url(fonts/bangers-latin-400-normal.woff2) format("woff2")}
+:root{--encre:#111;--jaune:#ffd600;--rouge:#ff2d2d;--bleu:#1fb6ff;--titre:"Bangers",system-ui,sans-serif;--rayon:10px;}
+body{background:#fff8dc radial-gradient(rgba(255,45,45,.13) 2px,transparent 2.5px) 0 0/14px 14px}
+/* onglets & filtres */
+.onglet{border:3px solid var(--encre);border-radius:10px;font-family:var(--titre);font-weight:400;font-size:1.2rem;letter-spacing:.04em}
+.onglet.actif{background:var(--jaune);color:var(--encre);box-shadow:5px 5px 0 var(--encre)}
+.onglet-appr.actif{background:var(--appr);color:#fff}
+.puce,.recherche input,.choix-ville select,.legende-barre{border:2.5px solid var(--encre)}
+.puce.actif{background:var(--rouge);border-color:var(--encre)}
+/* cases de BD */
+.secteur,.carte,.lycee,.guide-bloc,.vide-message,.page-texte{border:3px solid var(--encre);border-radius:8px;background:#fff;box-shadow:4px 4px 0 var(--encre)}
+.secteur:hover,.carte:hover,.carte:focus-visible{box-shadow:7px 7px 0 var(--encre)}
+.secteur.actif{background:var(--jaune)}
+.secteur .nom{font-family:var(--titre);font-weight:400;font-size:1.15rem;letter-spacing:.03em}
+.carte h3,.guide-bloc h3,.fiche-haut h2,.guide h2{font-family:var(--titre);font-weight:400;letter-spacing:.03em;font-size:1.45rem}
+.secteur .picto,.carte-picto{border:3px solid var(--encre);border-radius:50%}
+.etiquette{border:1.5px solid var(--encre)}
+dialog{border:4px solid var(--encre);border-radius:12px;box-shadow:10px 10px 0 var(--encre)}
+.bouton-lien{border:2.5px solid var(--encre)}
+.bouton-lien.principal{background:var(--rouge);border-color:var(--encre)}
+.onglet.actif{box-shadow:5px 5px 0 var(--lime)}
+.entete{--titre:"Bricolage Grotesque",system-ui,sans-serif;--jaune:#ffd23f;--encre:#15122b}
+.entete-resultats h2{font-family:var(--titre);font-weight:400;font-size:2.1rem;letter-spacing:.04em;background:var(--jaune);border:3px solid var(--encre);padding:0 14px;display:inline-block;transform:rotate(-1deg);box-shadow:4px 4px 0 var(--encre)}
