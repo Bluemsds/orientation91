@@ -226,3 +226,103 @@ details a{color:var(--primaire)}
 .seul-appr{margin:0;font-size:.85rem;font-weight:600;color:var(--appr)}
 .temps-plein-carte{margin:0;font-size:.85rem;font-weight:600;color:var(--primaire)}
 .encadre.info .lien{display:inline;text-align:left;padding:0}
+
+/* ==== Thème « ado » (2026-11) : typo plus affirmée, contrastes forts, style sticker ==== */
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2")}
+:root{
+  --encre:#15122b; --fond:#f4f3f8; --trait:#d9d6e6; --doux:#55516b;
+  --primaire:#2f2ee0; --primaire-clair:#ebebff;
+  --lime:#c6f432; --rose:#ff5d8f; --ciel:#7cd4ff; --jaune:#ffd23f;
+  --titre:"Bricolage Grotesque",system-ui,sans-serif;
+  --ombre:0 0 0 1.5px var(--encre); --ombre-dure:4px 4px 0 var(--encre);
+  --rayon:16px;
+}
+body{background:var(--fond)}
+
+/* En-tête */
+.entete{background:
+  radial-gradient(circle at 92% 8%,rgba(255,93,143,.45) 0,transparent 32%),
+  radial-gradient(circle at 70% 110%,rgba(47,46,224,.75) 0,transparent 45%),
+  var(--encre);padding:34px 0 52px}
+.entete::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.entete > *{position:relative}
+.surtitre{color:#c9c5e0;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;font-weight:700}
+.badge-91{background:var(--lime);color:var(--encre);border-radius:6px;font-family:var(--titre);transform:rotate(-4deg);display:inline-block}
+.entete h1{font-family:var(--titre);font-size:clamp(2.2rem,5.4vw,4rem);line-height:.98;letter-spacing:-.035em;margin-bottom:14px}
+.surligne{display:inline-block;background:var(--lime);color:var(--encre);padding:0 .18em .04em;border-radius:6px;transform:rotate(-1.5deg);margin:4px 0}
+.intro{color:#dcd9ee}
+.chiffres{gap:10px}
+.chiffres li{background:transparent;border:1.5px solid rgba(255,255,255,.28);border-radius:12px;padding:6px 12px;color:#dcd9ee}
+.chiffres strong{font-family:var(--titre);font-size:1.35rem;color:#fff;margin-right:4px}
+.chiffres li:nth-child(1) strong{color:var(--lime)} .chiffres li:nth-child(2) strong{color:var(--ciel)} .chiffres li:nth-child(3) strong{color:var(--rose)}
+.raccourci{border:2px solid var(--encre);border-radius:14px;background:#fff;color:var(--encre);box-shadow:4px 4px 0 rgba(255,255,255,.9);font-weight:800;transition:transform .12s,box-shadow .12s}
+.raccourci:first-child{background:var(--lime)}
+.raccourci:hover,.raccourci:focus-visible{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(255,255,255,.9)}
+.raccourci:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.parcours{color:#c9c5e0}
+.parcours span{background:transparent;border:1.5px solid var(--lime);color:var(--lime);font-family:var(--titre)}
+
+/* Stickers (remplacent l'illustration) */
+.stickers{position:relative;height:280px;width:100%;max-width:400px;justify-self:end}
+.sticker{position:absolute;font-family:var(--titre);font-weight:800;font-size:1.05rem;padding:9px 15px;border-radius:14px;border:2px solid var(--encre);color:var(--encre);box-shadow:4px 4px 0 rgba(0,0,0,.45);white-space:nowrap}
+.s1{top:6px;left:18px;background:var(--jaune);transform:rotate(-7deg)}
+.s2{top:30px;right:0;background:var(--rose);transform:rotate(6deg)}
+.s3{top:98px;left:70px;background:#fff;transform:rotate(3deg)}
+.s4{top:150px;right:12px;background:var(--ciel);transform:rotate(-5deg)}
+.s5{top:190px;left:0;background:var(--lime);transform:rotate(-3deg)}
+.s6{top:236px;left:80px;background:#fff;transform:rotate(5deg)}
+.sticker-rond{position:absolute;top:226px;right:-4px;width:84px;height:84px;border-radius:50%;background:var(--primaire);color:#fff;border:2px solid #fff;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--titre);font-weight:800;font-size:.8rem;line-height:1.05;transform:rotate(12deg)}
+@media (max-width:760px){.stickers{display:none}}
+
+/* Onglets */
+.onglets{margin-top:-24px}
+.onglet{background:#fff;color:var(--encre);border:2px solid var(--encre);box-shadow:none;border-radius:14px;font-weight:700}
+.onglet.actif{background:var(--encre);color:#fff;outline:0;box-shadow:4px 4px 0 var(--lime)}
+.onglet-appr{color:var(--appr)}
+.onglet-appr.actif{background:var(--appr);color:#fff;box-shadow:4px 4px 0 var(--encre)}
+.onglet:focus-visible,.puce:focus-visible,.secteur:focus-visible,.carte:focus-visible{outline:3px solid var(--primaire);outline-offset:2px}
+
+/* Filtres */
+.puce{border:1.5px solid var(--encre);font-weight:700}
+.puce.actif{background:var(--encre);border-color:var(--encre)}
+.puce.actif small{color:#d8d5ea}
+.recherche input,.choix-ville select{border:1.5px solid var(--encre);border-radius:12px}
+.recherche input:focus,.choix-ville select:focus{outline:3px solid var(--lime);outline-offset:0;box-shadow:0 0 0 5px var(--encre)}
+.legende-barre{border:1.5px solid var(--encre)}
+
+/* Secteurs */
+.secteur{border:1.5px solid var(--encre);box-shadow:none;transition:transform .12s,box-shadow .12s}
+.secteur:hover{transform:translate(-2px,-2px);box-shadow:var(--ombre-dure)}
+.secteur .nom{font-family:var(--titre);font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.secteur .picto{font-size:1.9rem}
+.secteur.actif{background:var(--lime);border-color:var(--encre);box-shadow:var(--ombre-dure)}
+.secteur.actif .nb{color:var(--encre)}
+
+/* Titres */
+.entete-resultats h2,.ville-bloc h2,.guide h2{font-family:var(--titre);font-weight:800;letter-spacing:-.02em}
+.entete-resultats h2{font-size:1.6rem}
+
+/* Cartes formations */
+.carte,.lycee,.guide-bloc,.vide-message,.page-texte{border:1.5px solid var(--encre);box-shadow:none}
+.carte{transition:transform .12s,box-shadow .12s}
+.carte:hover,.carte:focus-visible{border-color:var(--encre);transform:translate(-3px,-3px);box-shadow:var(--ombre-dure)}
+.carte h3,.lycee h3,.guide-bloc h3{font-family:var(--titre);font-weight:800;letter-spacing:-.015em}
+.carte h3{font-size:1.2rem}
+.etiquette{font-weight:700}
+.etiquette.cap{background:#ffe3ec;color:#a3164a}
+.etiquette.bac{background:#e0f4ff;color:#075a85}
+.guide-bloc.important{border-width:2px;border-color:var(--appr);box-shadow:4px 4px 0 var(--appr)}
+
+/* Boutons-liens, fiche */
+.bouton-lien{border:1.5px solid var(--encre);border-radius:12px;color:var(--encre);font-weight:700}
+.bouton-lien:hover{border-color:var(--encre);box-shadow:3px 3px 0 var(--encre)}
+.bouton-lien.principal{background:var(--encre);border-color:var(--encre);color:#fff}
+.signaler{color:#9c3d00;border-color:#9c3d00}
+dialog{border:2px solid var(--encre);box-shadow:8px 8px 0 var(--encre)}
+.fiche-haut h2{font-family:var(--titre);font-weight:800;font-size:1.6rem;letter-spacing:-.02em}
+.repere{background:var(--encre);border-color:var(--lime)}
+.page-texte h2{font-family:var(--titre)}
+.retour{color:var(--lime)}
+
+@media (prefers-reduced-motion:reduce){.carte,.secteur,.raccourci{transition:none}.carte:hover,.secteur:hover,.raccourci:hover{transform:none}}
