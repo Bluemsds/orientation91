@@ -30,8 +30,8 @@
     'Beauté & bien-être': 'beaute', "Mode, cuir & métiers d'art": 'mode',
     'Sécurité': 'securite', 'Nature & espaces verts': 'nature'
   };
-  function icone(s) {
-    return ICONES[s] ? '<img src="assets/icones/' + ICONES[s] + '.webp" alt="" width="40" height="40" loading="lazy">' : PICTOS[s];
+  function icone(s, alt) {
+    return ICONES[s] ? '<img src="assets/icones/' + ICONES[s] + '.webp" alt="' + (alt ? esc(s) : '') + '" width="40" height="40" loading="lazy">' : PICTOS[s];
   }
   // Adresse qui reçoit les signalements d'erreur (à changer ici si besoin)
   var CONTACT = 'serge.dos-santos@ac-versailles.fr';
@@ -190,6 +190,7 @@
       var reste = off.length - max;
       if (reste > 0) lignes += '<li class="plus">+ ' + reste + ' autre' + (reste > 1 ? 's' : '') + ' lycée' + (reste > 1 ? 's' : '') + '</li>';
       return '<button class="carte" data-formation="' + f.id + '">' +
+        '<span class="carte-picto t' + (ORDRE_SECTEURS.indexOf(f.secteur) % 6 + 1) + '" title="' + esc(f.secteur) + '">' + icone(f.secteur, true) + '</span>' +
         '<div class="etiquettes">' + etiquetteNiveau(f) + etiquettesAcces(f) + '</div>' +
         '<h3>' + esc(f.nom) + '</h3>' + (seulementAppr(f) ? '<p class="seul-appr">Pas au lycée en Essonne : seulement en apprentissage</p>' : '') +
         (lyceesTempsPlein(f).length ? '<p class="temps-plein-carte">🏫 Au lycée : à choisir en 1re, dans ' + lyceesTempsPlein(f).length + ' lycée' + (lyceesTempsPlein(f).length > 1 ? 's' : '') + '</p>' : '') + '<p class="accroche">' + esc(f.description) + '</p><ul class="lieux">' + lignes + '</ul></button>';
@@ -293,7 +294,7 @@
     if (acc.segpa) enc += '<div class="encadre segpa"><strong>✔ Prioritaire pour les élèves de SEGPA.</strong> Les élèves de 3e SEGPA, ULIS et EANA passent en priorité sur ce CAP.</div>';
     if (acc.profil2de) enc += '<div class="encadre profil"><strong>CAP « profil 2de pro ».</strong> Les élèves de 3e générale sont prioritaires. Pour un élève de SEGPA, la candidature passe par une <strong>commission spécifique</strong> : parles-en à ton professeur principal.</div>';
     if (acc.erea) enc += '<div class="encadre erea"><strong>EREA : procédure particulière.</strong> L\'entrée en EREA passe par une commission d\'affectation spécifique.</div>';
-    var h = '<div class="fiche">' + enTete(etiquetteNiveau(f) + '<span class="etiquette">' + PICTOS[f.secteur] + ' ' + esc(f.secteur) + '</span>', f.nom) + enc +
+    var h = '<div class="fiche">' + enTete(etiquetteNiveau(f) + '<span class="etiquette etiquette-secteur">' + icone(f.secteur) + ' ' + esc(f.secteur) + '</span>', f.nom) + enc +
       '<h3>Le métier</h3><p>' + esc(f.description) + '</p>' +
       '<h4>Au quotidien</h4><ul class="puces">' + f.quotidien.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul>' +
       '<h4>Où travailler ?</h4><p>' + esc(f.lieux) + '</p>';

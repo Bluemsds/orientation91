@@ -336,3 +336,14 @@ dialog{border:2px solid var(--encre);box-shadow:8px 8px 0 var(--encre)}
 .secteur .picto img{width:40px;height:40px;display:block;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
 .secteur.actif .picto{background:#fff;box-shadow:3px 3px 0 var(--encre);transform:rotate(0) scale(1.06)}
 @media (prefers-reduced-motion:reduce){.secteur .picto{transition:none}}
+
+/* Icône du secteur sur chaque carte formation et dans la fiche */
+.carte{position:relative}
+.carte .etiquettes,.carte h3{padding-right:52px}
+.carte-picto{position:absolute;top:12px;right:12px;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--encre);background:#fff;display:flex;align-items:center;justify-content:center;transform:rotate(5deg);transition:transform .15s}
+.carte-picto img{width:32px;height:32px;display:block}
+.carte:hover .carte-picto{transform:rotate(0) scale(1.08)}
+.etiquette-secteur{display:inline-flex;align-items:center;gap:5px}
+.etiquette-secteur img{width:18px;height:18px}
+@media (prefers-reduced-motion:reduce){.carte-picto{transition:none}}
+.carte-picto.t1{background:#fff1bf}.carte-picto.t2{background:#dff3ff}.carte-picto.t3{background:#ffe1ea}.carte-picto.t4{background:#eefcc8}.carte-picto.t5{background:#ffe8d6}.carte-picto.t6{background:#ebe4ff}
