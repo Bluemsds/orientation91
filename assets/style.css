@@ -347,3 +347,8 @@ dialog{border:2px solid var(--encre);box-shadow:8px 8px 0 var(--encre)}
 .etiquette-secteur img{width:18px;height:18px}
 @media (prefers-reduced-motion:reduce){.carte-picto{transition:none}}
 .carte-picto.t1{background:#fff1bf}.carte-picto.t2{background:#dff3ff}.carte-picto.t3{background:#ffe1ea}.carte-picto.t4{background:#eefcc8}.carte-picto.t5{background:#ffe8d6}.carte-picto.t6{background:#ebe4ff}
+
+/* Toujours en clair : évite que la fiche passe en fond sombre (mode sombre du navigateur) */
+:root{color-scheme:light}
+dialog{background:#fff;color:var(--texte)}
+.encadre{color:var(--texte)}
