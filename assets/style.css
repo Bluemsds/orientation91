@@ -328,10 +328,11 @@ dialog{border:2px solid var(--encre);box-shadow:8px 8px 0 var(--encre)}
 @media (prefers-reduced-motion:reduce){.carte,.secteur,.raccourci{transition:none}.carte:hover,.secteur:hover,.raccourci:hover{transform:none}}
 
 /* Icônes des secteurs : pastille colorée façon sticker */
-.secteur .picto{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;border:1.5px solid var(--encre);background:var(--c,var(--lime));color:var(--encre);margin-bottom:6px;transform:rotate(-4deg);transition:transform .15s}
+.secteur .picto{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;border:1.5px solid var(--encre);background:var(--c,var(--lime));color:var(--encre);margin-bottom:6px;transform:rotate(-4deg);transition:transform .15s}
 .secteur:nth-child(even) .picto{transform:rotate(4deg)}
 .secteur:hover .picto{transform:rotate(0) scale(1.08)}
-.secteur:nth-child(6n+1){--c:var(--jaune)} .secteur:nth-child(6n+2){--c:var(--ciel)} .secteur:nth-child(6n+3){--c:var(--rose)}
-.secteur:nth-child(6n+4){--c:var(--lime)} .secteur:nth-child(6n+5){--c:#ffb27a} .secteur:nth-child(6n+6){--c:#c9b8ff}
-.secteur.actif .picto{background:var(--encre);color:var(--lime);transform:rotate(0)}
+.secteur:nth-child(6n+1){--c:#fff1bf} .secteur:nth-child(6n+2){--c:#dff3ff} .secteur:nth-child(6n+3){--c:#ffe1ea}
+.secteur:nth-child(6n+4){--c:#eefcc8} .secteur:nth-child(6n+5){--c:#ffe8d6} .secteur:nth-child(6n+6){--c:#ebe4ff}
+.secteur .picto img{width:40px;height:40px;display:block;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
+.secteur.actif .picto{background:#fff;box-shadow:3px 3px 0 var(--encre);transform:rotate(0) scale(1.06)}
 @media (prefers-reduced-motion:reduce){.secteur .picto{transition:none}}
